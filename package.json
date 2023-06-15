@@ -1,6 +1,5 @@
 {
   "name": "variants-x",
-  "private": true,
   "version": "0.0.1",
   "sideEffects": false,
   "keywords": [
