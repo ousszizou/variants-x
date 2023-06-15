@@ -1,0 +1,55 @@
+{
+  "name": "variants-x",
+  "private": true,
+  "version": "0.0.1",
+  "sideEffects": false,
+  "keywords": [
+    "css",
+    "classes",
+    "variants",
+    "styles"
+  ],
+  "author": "Oussama Djaidri <odjaidri@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ousszizou/variants-x"
+  },
+  "bugs": {
+    "url": "https://github.com/ousszizou/variants-x/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.es"
+    }
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@vitest/coverage-v8": "^0.32.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vitest": "^0.32.0"
+  },
+  "engines": {
+    "node": ">=16.x",
+    "pnpm": ">=8.x"
+  },
+  "packageManager": "pnpm@8.6.2"
+}
