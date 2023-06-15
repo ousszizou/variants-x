@@ -2,10 +2,8 @@ import { test, describe } from "vitest";
 import { vx } from "../src";
 import { Component } from "../src/types";
 
-describe('vx', () => { 
-  test("should apply default variants when no overrides are provided", ({
-    expect,
-  }) => {
+describe("vx", () => {
+  test("should apply default variants when no overrides are provided", ({ expect }) => {
     const button: Component = {
       base: "button",
       variants: {
@@ -28,14 +26,10 @@ describe('vx', () => {
     const classes = vxButton();
 
     expect(classes.split(" ")).toHaveLength(3);
-    expect(classes.split(" ")).toEqual(
-      expect.arrayContaining(["button", "button--lg", "button--primary"])
-    );
+    expect(classes.split(" ")).toEqual(expect.arrayContaining(["button", "button--lg", "button--primary"]));
   });
 
-  test("should override default variant with provided variant", ({
-    expect,
-  }) => {
+  test("should override default variant with provided variant", ({ expect }) => {
     const button: Component = {
       base: "button",
       variants: {
@@ -58,9 +52,7 @@ describe('vx', () => {
     const classes = vxButton({ size: "sm" });
 
     expect(classes.split(" ")).toHaveLength(3);
-    expect(classes.split(" ")).toEqual(
-      expect.arrayContaining(["button", "button--sm", "button--primary"])
-    );
+    expect(classes.split(" ")).toEqual(expect.arrayContaining(["button", "button--sm", "button--primary"]));
   });
 
   test("should handle component extensions correctly", ({ expect }) => {
@@ -95,12 +87,6 @@ describe('vx', () => {
     const classes = vxExtendedButton();
 
     expect(classes.split(" ")).toHaveLength(3);
-    expect(classes.split(" ")).toEqual(
-      expect.arrayContaining([
-        "button-extended",
-        "button--large",
-        "button--red",
-      ])
-    );
+    expect(classes.split(" ")).toEqual(expect.arrayContaining(["button-extended", "button--large", "button--red"]));
   });
 });

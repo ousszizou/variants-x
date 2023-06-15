@@ -1,7 +1,7 @@
-import { assertType, expectTypeOf, test, describe } from "vitest";
-import { Component, Variants, VxFunc } from "../src/types";
+import { expectTypeOf, test, describe } from "vitest";
+import { Component, Variants } from "../src/types";
 
-describe('types', () => { 
+describe("types", () => {
   test("Variants", () => {
     const variants: Variants = {
       size: {
